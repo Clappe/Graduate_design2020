@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国内高校研究生招生情况</title>
+    <style>
+        h2{
+            font-size: 50px;
+        }
+        td{
+            width: 300px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 35px;
+        }
+        td label{
+            width: 100%;
+        }
+        p input{
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgb(130, 130, 223);
+            border: none;
+            border-radius: 15px;
+            font-size: 35px;
+            padding: 0 15px;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+        select,td input{
+            width: 300px;
+            height: 50px;
+            font-size: 30px;
+            padding: 0;
+            margin-left: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="zycx-form-box" align = "center">
+        <h2 align = "center">硕士研究生招生目录查询</h2>
+        <div class="zycx-form">
+            <form name="form1" action = "http://localhost:5000/zyxx" method="POST">
+                <table align="center" width = "1050" height = "200">
+                    <colgroup>
+                        <col width = "120">
+                        <col width = "260">
+                        <col width = "120">
+                        <col width = "260">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td align="right" >
+                                <label>所在省市</label>
+                            </td>
+                            <td align="left">
+                                <select name="ss-sele" id="ss-sele" class="pro-select">
+                                    <option value>--选择省市--</option>
+                                    <option>北京市</option>
+                                    <option>天津市</option>
+                                    <option>河北省</option>
+                                    <option>山西省</option>
+                                    <option>内蒙古自治区</option>
+                                    <option>辽宁省</option>
+                                    <option>吉林省</option>
+                                    <option>黑龙江省</option>
+                                    <option>上海市</option>
+                                    <option>江苏省</option>
+                                    <option>浙江省</option>
+                                    <option>安徽省</option>
+                                    <option>福建省</option>
+                                    <option>江西省</option>
+                                    <option>山东省</option>
+                                    <option>河南省</option>
+                                    <option>湖北省</option>
+                                    <option>湖南省</option>
+                                    <option>广东省</option>
+                                    <option>广西壮族自治区</option>
+                                    <option>海南省</option>
+                                    <option>重庆市</option>
+                                    <option>四川省</option>
+                                    <option>贵州省</option>
+                                    <option>云南省</option>
+                                    <option>西藏自治区</option>
+                                    <option>陕西省</option>
+                                    <option>甘肃省</option>
+                                    <option>青海省</option>
+                                    <option>宁夏回族自治区</option>
+                                    <option>新疆维吾尔自治区</option>
+                                </select>
+                            </td>
+                            <td align="right">招生单位</td>
+                            <td align="left" ><input type="text" placeholder="请输入招生单位名称" id="zcdw" name="zsdw"/></td>
+                        </tr>
+                        <tr>
+                            <td align="right">专业名称</td>
+                            <td align="left"><input type="text" placeholder="请输入专业名称" id="zymc" name="zymc"/></td>
+                            <td align="right">学习方式</td>
+                            <td align="left">
+                                <select id="xxfs-sele" name="xxfs-sele" class="me-select">
+                                    <option value>--选择学习方式--</option>
+                                    <option>全日制</option>
+                                    <option>非日制</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p align = "center">
+                    <input type="submit" value="查询">
+                </p>
+                <br>
+                <a href="/home">点击此处返回首页</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

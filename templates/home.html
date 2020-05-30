@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国内高校研究生招生信息-首页</title>
+    <style>
+        h1{
+            font-size: 45px;
+        }
+        .container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input {
+            display: block;
+            background-color: rgb(142, 142, 245);
+            border: none;
+            border-radius: 20px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 38px;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 align="center">国内高校研究生招生信息</h1>
+        <br>
+        <form action="http://localhost:5000/query" align="center">
+            <input type="submit" value="点击进入查询页面" />
+        </form>
+        <br>
+        <form action="http://localhost:5000/to_adjust" align="center">
+            <input type="submit" value="点击进入调剂情况查询" />
+        </form>
+        <br>
+        <form action="http://localhost:5000/predict" align="center">
+            <input type="submit" value="点击进入查看历年考研总体情况" />
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询结果</title>
+    <style>
+        h1{
+            font-size: 45px;
+        }
+        td{
+            text-align: center;
+            font-size: 21px;
+        }
+        table,td{
+            border-radius: 12px;
+        }
+        table:hover{
+            background-color: rgb(222, 206, 236);
+        }
+    </style>
+</head>
+<body>
+    <h1 align = "center">查询结果</h1>
+    <br>
+    <table border="1" align="center">
+        <thead>
+            <td>院校</td>
+            <td>院系所</td>
+            <td>专业</td>
+            <td>学习方式</td>
+            <td>研究方向</td>
+            <td>招生人数</td>
+        </thead>
+        {% for info in infos %}
+            <tr>
+                <td>{{ info["zhaoshengdanwei"] }}</td>
+                <td>{{ info["yuanxisuo"] }}</td>
+                <td>{{ info["zhuanye"] }}</td>
+                <td>{{info["xuexifangshi"] }}</td>
+                <td>{{info["yanjiufangxiang"]}}</td>
+                <td>{{info["num"]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/query">点击此处返回查询页面</a>
+    <br>
+    <a href="/home">点击此处返回首页</a>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调剂查询结果</title>
+    <style>
+        h1{
+            font-size: 55px;
+        }
+        table,td{
+            border-radius: 12px;
+            text-align: center;
+        }
+        td{
+            height: 40px;
+            font-size: 30px;
+        }
+        table:hover{
+            background-color: rgb(222, 206, 236);
+        }
+    </style>
+</head>
+<body>
+    <h1 align = "center">查询结果</h1>
+    <br>
+    <table border="1" align="center">
+        <thead>
+            <td>学校名称</td>
+            <td>调剂专业</td>
+            <td>名额</td>
+        </thead>
+        {% for inf in infs %}
+            <tr>
+                <td>{{inf["college"]}}</td>
+                <td>{{inf["major"]}}</td>
+                <td>{{inf["num"]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/to_adjust">点击此处返回调剂查询页面</a>
+    <br>
+    <a href="/home">点击此处返回首页</a>
+</body>
+</html>

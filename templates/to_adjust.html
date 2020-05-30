@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调剂情况</title>
+    <style>
+        h1{
+            font-size: 50px;
+        }
+        tr td input{
+            display: block;
+            height: 40px;
+            width: 400px;
+            border-radius: 10px;
+            padding: 8px;
+            margin-top: 25px;
+            font-size: 30px;
+        }
+        .select{
+            height: 45px;
+            line-height: 45px;
+            padding: 0;
+            width: 120px;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+        .select:hover{
+            background-color: rgb(110, 110, 187);
+        }
+    </style>
+</head>
+<body>
+    <h1 align = "center">调剂情况查询</h1>
+    <form action="http://localhost:5000/adjust_result" align = "center" method="POST">
+        <table align="center">
+            <tr>
+                <td><input type="text" placeholder="请输入调剂学校名称" name="tjxx"></td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <input type="text" name="tjzy" id="tjzy" placeholder="请输入专业">
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td>
+                    <input class="select" type="submit" value="查询">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <a href="/home">点击此处返回首页</a>
+    </form>
+</body>
+</html>
